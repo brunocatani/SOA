@@ -12,7 +12,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
-    cache_dir='/home/nero/Projects/shared/models', #If using local folder for loading input it here
+    cache_dir='/home/ubuntu/Projects/shared/models', #If using local folder for loading input it here
     torch_dtype=torch.float16, # torch.bfloat16 - Ampere+ GPU // torch.float16 - 8bit or older GPU[]
     trust_remote_code=True, #Requirement for some models
     load_in_8bit=True, #Loads in 8bit mode instead of fp16 // Ex: 7b Model = 13gb in fp16, 6-7gb in 8bit 

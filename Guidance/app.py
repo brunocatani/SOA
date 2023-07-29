@@ -17,7 +17,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, TextStreamer, pipe
 
 
 import os
-os.environ["SERPER_API_KEY"] = '4ac67343b2880e12270aedb214eda276f2ac7dbc671e9c1bd642ff0f59af187d'
+os.environ["SERPER_API_KEY"] = ''
 
 
 
@@ -34,7 +34,7 @@ def greet(name):
 
 streamer = TextStreamer(tokenizer=personal_tokenizer)
 
-nexus = guidance.llms.transformers.MPT(model=personal_model, tokenizer=personal_tokenizer, stream=True)
+nexus = guidance.llms.transformers(model=personal_model, tokenizer=personal_tokenizer, stream=True)
 guidance.llm = nexus
 dict_tools = load_tools()
 
