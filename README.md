@@ -2,7 +2,7 @@
 
 **All of these implementation use streamlit as a web deployment application for ease of testing and development**
 
-  **For basic libraries and requirements run inside of work enviroment**
+  **For basic libraries and requirements run inside of work enviroment or venv**
   ``` 
   pip install -r requirements.txt
   ```
