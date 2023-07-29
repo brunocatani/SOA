@@ -17,7 +17,7 @@ model_id = "OpenAssistant/stablelm-7b-sft-v7-epoch-3"
 # Load Tokenizer
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 # Load Model 
-model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir='/home/ubuntu/Projects/shared/models', 
+model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir='/home/ubuntu/projects/shared/models', 
     torch_dtype=torch.bfloat16, trust_remote_code=True, load_in_8bit=True, device_map="auto", offload_folder="offload")
 # Set PT model to inference mode
 model.eval()
